@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resources — SparkyBites</title>
-<meta name="description" content="Episode notes, patterns and downloadable files to go with the GoodToKnow fursuit making series.">
+<meta name="description" content="Patterns, supplier links and downloadable files for every GoodToKnow fursuit making episode.">
 <link rel="icon" href="images/sparky-refsheet.avif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,60 +17,132 @@
     text-align: center;
   }
   .page-head h1 { font-family: var(--font-display); font-size: 2.6rem; margin: 0 0 12px; }
-  .page-head p { color: var(--taupe); max-width: 560px; margin: 0 auto; }
+  .page-head p.lede { color: var(--taupe); max-width: 560px; margin: 0 auto 12px; }
+  .page-head p.scroll-hint { color: var(--teal); font-size: 0.9rem; font-style: italic; margin: 20px 0 0; }
 
-  .resources-list {
-    padding: 56px 0 96px;
+  .btn-telegram { background: #29A9EA; color: white; box-shadow: 0 4px 0 #1c7cb0; }
+  .btn-telegram:hover { box-shadow: 0 6px 0 #1c7cb0; }
+
+  .jump-nav {
+    position: sticky;
+    top: 64px;
+    z-index: 40;
+    background: var(--bg-deep);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 12px 0;
   }
-
-  .res-card {
-    display: grid;
-    grid-template-columns: 90px 1fr auto;
-    gap: 20px;
-    align-items: center;
-    background: var(--bg-mid);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
-    padding: 22px 24px;
-    margin-bottom: 18px;
+  .jump-nav-inner {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
-  .res-num {
-    font-family: var(--font-display);
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--teal);
-    text-align: center;
-  }
-
-  .res-body h3 { margin: 0 0 6px; font-family: var(--font-display); font-size: 1.2rem; }
-  .res-body p { margin: 0; color: var(--cream); opacity: 0.85; font-size: 0.95rem; }
-
-  .res-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-  .res-actions a {
+  .jump-nav a {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-decoration: none;
-    padding: 9px 16px;
+    color: var(--cream);
+    background: var(--bg-mid);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 6px 14px;
     border-radius: 999px;
     white-space: nowrap;
   }
-  .res-watch { background: #FF0033; color: white; }
-  .res-download { background: var(--card); color: white; }
-  .res-placeholder { opacity: 0.55; pointer-events: none; }
+  .jump-nav a:hover { background: var(--card); }
 
-  .placeholder-note {
-    text-align: center;
-    color: var(--taupe);
-    font-size: 0.9rem;
-    margin-top: 12px;
-    font-style: italic;
+  .resources-list { padding: 56px 0 40px; }
+
+  .ep-card {
+    scroll-margin-top: 130px;
+    background: var(--bg-mid);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 32px 32px 36px;
+    margin-bottom: 24px;
   }
 
+  .ep-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .ep-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--teal);
+  }
+
+  .ep-block { margin-bottom: 22px; }
+  .ep-block:last-child { margin-bottom: 0; }
+  .ep-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--pale-yellow);
+    margin: 0 0 4px;
+  }
+  .ep-block .price-note { color: var(--taupe); font-size: 0.88rem; margin: 0 0 10px; font-style: italic; }
+  .ep-block p { margin: 0 0 10px; font-size: 0.96rem; color: var(--cream); opacity: 0.92; }
+  .ep-block ul.supply-list { margin: 0 0 10px; padding-left: 20px; font-size: 0.96rem; opacity: 0.92; }
+  .ep-block ul.supply-list li { margin-bottom: 4px; }
+
+  .link-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+  .link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--bg-deep);
+    background: var(--pale-yellow);
+    padding: 7px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .link-pill:hover { background: var(--teal); color: white; }
+  .link-pill .desc { font-weight: 400; opacity: 0.75; }
+
+  .pattern-box {
+    background: rgba(0,0,0,0.18);
+    border: 1px dashed rgba(255,255,255,0.2);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-top: 14px;
+  }
+  .pattern-box h4 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    margin: 0 0 10px;
+    color: var(--cream);
+  }
+  .download-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+  .download-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    background: var(--card);
+    padding: 8px 16px;
+    border-radius: 999px;
+  }
+  .download-pill:hover { background: var(--card-deep); }
+  .credit-note { font-size: 0.82rem; color: var(--taupe); font-style: italic; margin: 0; }
+
+  .end-cta { text-align: center; padding: 20px 0 80px; }
+  .end-cta h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 10px; }
+  .end-cta p { color: var(--taupe); margin: 0 0 24px; }
+
   @media (max-width: 640px) {
-    .res-card { grid-template-columns: 1fr; text-align: left; }
-    .res-num { text-align: left; }
+    .ep-card { padding: 24px 20px 28px; }
+    .jump-nav { top: 0; }
   }
 </style>
 </head>
@@ -88,8 +160,7 @@
         <li><a href="resources.html">Resources</a></li>
       </ul>
     </nav>
-    <!-- TODO: replace with your real channel URL -->
-    <a class="btn btn-yt" href="https://www.youtube.com/@SparkyCanDo" target="_blank" rel="noopener">
+    <a class="btn btn-yt" href="https://www.youtube.com/@SparkyBites" target="_blank" rel="noopener">
       <svg class="icon-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12l-6.2 3.5Z"/></svg>
       Watch on YouTube
     </a>
@@ -99,59 +170,221 @@
 <main>
   <section class="page-head">
     <div class="wrap">
-      <h1>Episode Resources</h1>
-      <p>Notes, patterns and downloadable files for each GoodToKnow episode. Watch the video, then grab what you need below.</p>
+      <h1>Resources!</h1>
+      <p class="lede">You want patterns, links and files? We gottcha covered baby! Maybe even a GoodToKnow creative space, group chat for love and support? Of course, we got that for ya too!</p>
+      <a class="btn btn-telegram" href="https://t.me/GoodToKnowSeries" target="_blank" rel="noopener">&rsaquo; Join us on Telegram &lsaquo;</a>
+      <p class="scroll-hint">Scroll down to the GoodToKnow episode you're watching to see resources pertaining to that episode ^^</p>
     </div>
   </section>
+
+  <nav class="jump-nav" aria-label="Jump to episode">
+    <div class="wrap jump-nav-inner">
+      <a href="#ep1">Ep 1</a>
+      <a href="#ep2">Ep 2</a>
+      <a href="#ep5">Ep 5</a>
+      <a href="#ep6">Ep 6</a>
+      <a href="#ep7">Ep 7</a>
+      <a href="#ep8">Ep 8 &amp; 9</a>
+      <a href="#ep10">Ep 10</a>
+    </div>
+  </nav>
 
   <section class="resources-list">
     <div class="wrap">
 
-      <!-- ============================================================
-           PLACEHOLDER EPISODE CARDS
-           Duplicate this .res-card block for each episode once you
-           send over the real titles, descriptions, video links and
-           downloadable files.
-      ============================================================= -->
+      <article class="ep-card" id="ep1">
+        <div class="ep-head"><span class="ep-num">Episode 1</span></div>
 
-      <div class="res-card res-placeholder">
-        <div class="res-num">01</div>
-        <div class="res-body">
-          <h3>Episode title goes here</h3>
-          <p>Short description of what this episode covers.</p>
+        <div class="ep-block">
+          <h3>My favorite online fur suppliers!</h3>
+          <p class="price-note">Price range: $20&ndash;100 per meter + shipping</p>
+          <div class="link-row">
+            <a class="link-pill" href="https://www.howlfabrics.com/" target="_blank" rel="noopener">Howl Fabric</a>
+            <a class="link-pill" href="https://bigzfabric.com/index.php/fabrics/faux-faux-fur-fabric-long-pile.html" target="_blank" rel="noopener">Big Z Fabric</a>
+            <a class="link-pill" href="https://fursuitsupplies.com/" target="_blank" rel="noopener">Fursuit Supplies</a>
+            <a class="link-pill" href="https://www.mohairbearmakingsupplies.co.uk/index.php/fabric-room/faux-fur-fabrics" target="_blank" rel="noopener">Mohair Bear Making Supplies</a>
+            <a class="link-pill" href="https://crscrafts.com/bear-supplies/fabrics-bs/faux-fur-bs.html" target="_blank" rel="noopener">CRs Crafts</a>
+            <a class="link-pill" href="https://www.fabricempire.com/single-tone.aspx" target="_blank" rel="noopener">Fabric Empire</a>
+          </div>
+          <p>Howl Fabric is run by furries for furries, with rare fur colour finds. Big Z Fabric has a great variety in short/medium/long with hard-to-beat prices. Fursuit Supplies does exactly what the name suggests. Mohair Bear Making Supplies has interesting, often expensive, very high-quality furs &mdash; you can also get fur here in very small pieces. CRs Crafts has some good finds for natural looking and feeling furs. Fabric Empire has an interesting variety of furs with good prices too.</p>
+          <p>And of course, searching deep deeeep down into Google/Google Images can help with finding hard-to-get fur colours. Even eBay or Etsy will surprise you at times.</p>
         </div>
-        <div class="res-actions">
-          <a class="res-watch" href="#">Watch</a>
-          <a class="res-download" href="#">Download files</a>
-        </div>
-      </div>
 
-      <div class="res-card res-placeholder">
-        <div class="res-num">02</div>
-        <div class="res-body">
-          <h3>Episode title goes here</h3>
-          <p>Short description of what this episode covers.</p>
+        <div class="ep-block">
+          <h3>Other supplies</h3>
+          <ul class="supply-list">
+            <li>Sewing thread (60s Bonded Nylon, Tex 45) &mdash; $10&ndash;20</li>
+            <li>Zippers ($5&ndash;10), webbing ($2&ndash;5 per meter) and fabric ($5&ndash;20 per meter) &mdash; all probably at your local craft shop</li>
+            <li>Stuffing ($2&ndash;10) and foam ($40&ndash;100 per double bed size) &mdash; I get mine from all-purpose stores like The Warehouse (NZ/Aus) or Walmart (USA). I buy pillows for stuffing and 1&Prime; topper mattresses for foam.</li>
+            <li>"Mochi Stuffing" &mdash; a super soft fluffy stuffing for paw pads, I get it from AliExpress</li>
+          </ul>
         </div>
-        <div class="res-actions">
-          <a class="res-watch" href="#">Watch</a>
-          <a class="res-download" href="#">Download files</a>
-        </div>
-      </div>
+      </article>
 
-      <div class="res-card res-placeholder">
-        <div class="res-num">03</div>
-        <div class="res-body">
-          <h3>Episode title goes here</h3>
-          <p>Short description of what this episode covers.</p>
-        </div>
-        <div class="res-actions">
-          <a class="res-watch" href="#">Watch</a>
-          <a class="res-download" href="#">Download files</a>
-        </div>
-      </div>
+      <article class="ep-card" id="ep2">
+        <div class="ep-head"><span class="ep-num">Episode 2</span></div>
 
-      <p class="placeholder-note">Send over your episode titles, descriptions, YouTube links and files &mdash; I'll turn these into the real thing.</p>
+        <div class="ep-block">
+          <h3>Minky, polar fleece &amp; lining fabric</h3>
+          <p>For your handpaws, found at your local craft/fabric shop for around $10&ndash;30 per meter. A few online shops for minky fabrics:</p>
+          <div class="link-row">
+            <a class="link-pill" href="https://www.howlfabrics.com/minky-fabric?page=2" target="_blank" rel="noopener">Howl Fabric <span class="desc">&ndash; regular minky</span></a>
+            <a class="link-pill" href="https://bigzfabric.com/index.php/fabrics/minky-cuddle-fabric.html" target="_blank" rel="noopener">Big Z Fabric <span class="desc">&ndash; incl. 4-way-stretch mochi minky</span></a>
+            <a class="link-pill" href="https://www.aliexpress.com/item/4000058595483.html" target="_blank" rel="noopener">AliExpress <span class="desc">&ndash; many more mochi minky colours</span></a>
+          </div>
+          <p>The handpaw lining was custom ordered from <a class="link-pill" href="http://www.spoonflower.com/" target="_blank" rel="noopener">SpoonFlower</a>, Sport Lycra&reg; at $37.80 per yard + shipping &mdash; highly recommended! I also use this fun custom fabric in the head and other parts later on.</p>
+        </div>
 
+        <div class="pattern-box">
+          <h4>Puffy Paws Pattern</h4>
+          <p class="price-note">Print on A4 paper with "Print Actual Size" in settings. Edges slightly touching the paper sides is fine &mdash; if they look too small for your hands, add 1&ndash;2cm of extra allowance around the edges.</p>
+          <div class="download-row">
+            <a class="download-pill" href="files/HandPaw1.pdf">&#8595; Hand Paw 1</a>
+            <a class="download-pill" href="files/HandPaw2.pdf">&#8595; Hand Paw 2</a>
+            <a class="download-pill" href="files/HandPaw3.pdf">&#8595; Hand Paw 3</a>
+          </div>
+          <p class="credit-note">You may use these patterns to produce products to sell. Credit to the GoodToKnow series is appreciated! ^^</p>
+        </div>
+
+        <div class="ep-block">
+          <h3>Foam &amp; feet supplies</h3>
+          <ul class="supply-list">
+            <li>EVA 1cm thick foam ($10&ndash;20 for a 4-pack)</li>
+            <li>One inch soft foam ($30&ndash;80), the kind I use is called a topper mattress</li>
+            <li>EVA "softer foam" like a camping mat ($10&ndash;20) and masking tape ($2&ndash;5) &mdash; from all-purpose stores like The Warehouse (NZ/Aus) or Walmart/Hobby Lobby (USA)</li>
+          </ul>
+          <p>Magnets I buy from Amazon/eBay or Trade Me (NZ site), and I print the magnet holders myself &mdash; download the files below, or order pre-made from <a class="link-pill" href="https://www.fuzzbuttfursuits.com/collections/footpaw-supplies/products/magnet-holders-for-reversible-indoor-outdoor-soling" target="_blank" rel="noopener">FuzzButtFursuits</a>, who also sell matching magnets.</p>
+        </div>
+
+        <div class="pattern-box">
+          <h4>Feet Paw patterns &amp; magnet holder .stl files</h4>
+          <p class="price-note">Print the feet paw pattern pieces, and 3D print whichever magnet holder size fits &mdash; Small/Male or Big/Female.</p>
+          <div class="download-row">
+            <a class="download-pill" href="files/Feetpaws%201.pdf">&#8595; Feet Paw 1</a>
+            <a class="download-pill" href="files/Feetpaws%202.pdf">&#8595; Feet Paw 2</a>
+            <a class="download-pill" href="files/Big-Female.stl">&#8595; Magnet Holder &ndash; Big/Female (.stl)</a>
+            <a class="download-pill" href="files/Small-Male.stl">&#8595; Magnet Holder &ndash; Small/Male (.stl)</a>
+          </div>
+          <p class="credit-note">You may use these patterns to produce products to sell. Credit to the GoodToKnow series is appreciated! ^^</p>
+        </div>
+      </article>
+
+      <article class="ep-card" id="ep5">
+        <div class="ep-head"><span class="ep-num">Episode 5</span></div>
+        <div class="ep-block">
+          <h3>Supplies</h3>
+          <ul class="supply-list">
+            <li>Duct tape ($20&ndash;60)</li>
+            <li>Good quality tights ($20&ndash;50)</li>
+            <li>One inch soft foam ($30&ndash;50), the kind I use is called a topper mattress</li>
+            <li>Thin black stretchy material ($20&ndash;30) from a fabric shop</li>
+          </ul>
+          <p>The rest of the items I get from all-purpose stores like The Warehouse (NZ/Aus) or Walmart/Hobby Lobby (USA).</p>
+        </div>
+      </article>
+
+      <article class="ep-card" id="ep6">
+        <div class="ep-head"><span class="ep-num">Episode 6</span></div>
+        <div class="ep-block">
+          <h3>Supplies</h3>
+          <ul class="supply-list">
+            <li>Scissors, markers, masking tape ($10&ndash;$30)</li>
+            <li>Sewing machine and overlocker &mdash; optional, but definitely makes the job easier and tidier. You could hand sew everything, just give yourself less seam allowance if you do!</li>
+          </ul>
+        </div>
+        <div class="ep-block">
+          <h3>(again) My favorite online fur suppliers!</h3>
+          <p class="price-note">Price range: $20&ndash;100 per meter + shipping</p>
+          <div class="link-row">
+            <a class="link-pill" href="https://www.howlfabrics.com/" target="_blank" rel="noopener">Howl Fabric</a>
+            <a class="link-pill" href="https://bigzfabric.com/index.php/fabrics/faux-faux-fur-fabric-long-pile.html" target="_blank" rel="noopener">Big Z Fabric</a>
+            <a class="link-pill" href="https://fursuitsupplies.com/" target="_blank" rel="noopener">Fursuit Supplies</a>
+            <a class="link-pill" href="https://www.mohairbearmakingsupplies.co.uk/index.php/fabric-room/faux-fur-fabrics" target="_blank" rel="noopener">Mohair Bear Making Supplies</a>
+            <a class="link-pill" href="https://crscrafts.com/bear-supplies/fabrics-bs/faux-fur-bs.html" target="_blank" rel="noopener">CRs Crafts</a>
+            <a class="link-pill" href="https://www.fabricempire.com/single-tone.aspx" target="_blank" rel="noopener">Fabric Empire</a>
+          </div>
+          <p>And of course, searching deep deeeep down into Google/Google Images can help with finding hard-to-get fur colours. Even eBay or Etsy will surprise you at times.</p>
+        </div>
+      </article>
+
+      <article class="ep-card" id="ep7">
+        <div class="ep-head"><span class="ep-num">Episode 7</span></div>
+        <div class="ep-block">
+          <h3>Supplies</h3>
+          <p>Just the basics &mdash; scissors, marker, bias tape, main front zipper, other half zippers from the feet and tail, sewing needle/thread, and a <strong>POSITIVE ATTITUDE!</strong></p>
+        </div>
+      </article>
+
+      <article class="ep-card" id="ep8">
+        <div class="ep-head"><span class="ep-num">Episode 8</span></div>
+
+        <div class="ep-block">
+          <h3>Supplies</h3>
+          <p>A headbase ($150&ndash;200) &mdash; mine is a 3D printed base from <a class="link-pill" href="https://www.fuzzbuttfursuits.com/" target="_blank" rel="noopener">FuzzButtFursuits</a>. You can also find good resin head bases and other fursuit supplies from <a class="link-pill" href="https://dreamvisioncreations.com/" target="_blank" rel="noopener">DreamVisionCreations</a>.</p>
+          <ul class="supply-list">
+            <li>One inch soft foam ($30&ndash;50), the kind I use is called a topper mattress</li>
+            <li>Foams from two inch to 1/2 a cm can be found at craft shops, prices vary &mdash; keep an eye out!</li>
+            <li>Masking tape ($2&ndash;5 per roll) &mdash; hardware or craft stores</li>
+          </ul>
+        </div>
+
+        <div class="pattern-box">
+          <h4>Back of Head Pattern</h4>
+          <p class="price-note">Print on A4 paper with "Print Actual Size" in settings.</p>
+          <div class="download-row">
+            <a class="download-pill" href="files/Back%20Of%20Head.pdf">&#8595; Back of Head Pattern</a>
+          </div>
+          <p class="credit-note">You may use these patterns to produce a product to sell. Credit to the GoodToKnow series is appreciated. ^^</p>
+        </div>
+
+        <div class="ep-block">
+          <h3>Magnets &amp; soft parts</h3>
+          <p>Magnets used for the eyebrows are 10mm wide by 5mm thick, while the tongue magnets are 20mm wide by 3mm thick, both grade N45. I get mine from an online shop in NZ: <a class="link-pill" href="https://dangerousmagnets.co.nz/" target="_blank" rel="noopener">DangerousMagnets.co.nz</a>. Magnets of all sizes and strengths can be bought online (Amazon, eBay, Alibaba, AliExpress etc.) but some places lie about their strength, so read reviews first.</p>
+          <p>For soft tongue fabric, or even teeth/pads/nose:</p>
+          <div class="link-row">
+            <a class="link-pill" href="https://www.howlfabrics.com/minky-fabric?page=2" target="_blank" rel="noopener">Howl Fabric</a>
+            <a class="link-pill" href="https://bigzfabric.com/index.php/fabrics/minky-cuddle-fabric.html" target="_blank" rel="noopener">Big Z Fabric</a>
+            <a class="link-pill" href="https://www.aliexpress.com/item/4000058595483.html" target="_blank" rel="noopener">AliExpress</a>
+          </div>
+          <p>The 1cm thick EVA foam is just a mat or yoga mat from my local shop, The Warehouse. K-Mart, Walmart or Hobby Lobby would sell them too.</p>
+        </div>
+
+        <div class="pattern-box">
+          <h4>Patterns for Episodes 9 &amp; 10</h4>
+          <p class="price-note">Print on A4 paper with "Print Actual Size" in settings.</p>
+          <div class="download-row">
+            <a class="download-pill" href="files/Nose%2C%20Tongue%20%26%20Teeth.pdf">&#8595; Nose, Tongue &amp; Teeth</a>
+            <a class="download-pill" href="files/Eyebrows%20%26%20Neck.pdf">&#8595; Eyebrows &amp; Neck</a>
+            <a class="download-pill" href="files/Hair%20%26%20Neck.pdf">&#8595; Hair &amp; Neck</a>
+          </div>
+          <p class="credit-note">You may use these patterns to produce a product to sell. Credit to the GoodToKnow series is appreciated! ^^</p>
+        </div>
+      </article>
+
+      <article class="ep-card" id="ep10">
+        <div class="ep-head"><span class="ep-num">Episode 10</span></div>
+        <div class="ep-block">
+          <h3>Supplies</h3>
+          <ul class="supply-list">
+            <li>Black elastic for the lip lining, 6mm wide &mdash; online or your local craft store ($2&ndash;5 small roll)</li>
+            <li>3D printed eye bases ($10) &mdash; bought from <a class="link-pill" href="https://www.fuzzbuttfursuits.com/" target="_blank" rel="noopener">FuzzButtFursuits</a></li>
+            <li>Buckram (mesh for the eyes) &mdash; online or at a craft shop, same goes for acrylic paint and clear coat spray</li>
+            <li>Eyelid/eyebrow plastic &mdash; used from folders ($2&ndash;5)</li>
+            <li>Flat metal &mdash; get creative and buy a roll or sheet from your local hardware store, plus tin snips for cutting it</li>
+          </ul>
+          <p>Magnets used behind the eyelids are 10mm wide by 5mm thick, grade N45 ($2&ndash;5 each). I get mine from an online shop in NZ: <a class="link-pill" href="https://dangerousmagnets.co.nz/" target="_blank" rel="noopener">DangerousMagnets.co.nz</a>. Magnets of all sizes and strengths can be bought online (Amazon, eBay, Alibaba, AliExpress etc.) but some places lie about their strength, so read reviews first.</p>
+          <p>Fan ($20&ndash;40) bought from <a class="link-pill" href="https://dreamvision-creations.myshopify.com/" target="_blank" rel="noopener">DreamVisionCreations</a> &mdash; available in battery pack or USB form. I prefer USB even though I used a battery version in this tutorial, but it doesn't overly matter, just personal preference! ^^</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="end-cta">
+    <div class="wrap">
+      <h2>Any questions?</h2>
+      <p>Just send me a message/e-mail, or hit the GTK Telegram community up.</p>
+      <a class="btn btn-telegram" href="https://t.me/GoodToKnowSeries" target="_blank" rel="noopener">&rsaquo; Join us on Telegram &lsaquo;</a>
     </div>
   </section>
 </main>
@@ -173,9 +406,10 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Watch</h4>
+            <h4>Watch &amp; Chat</h4>
             <ul>
-              <li><a href="https://www.youtube.com/@SparkyCanDo" target="_blank" rel="noopener">YouTube Channel</a></li>
+              <li><a href="https://www.youtube.com/@SparkyBites" target="_blank" rel="noopener">YouTube Channel</a></li>
+              <li><a href="https://t.me/GoodToKnowSeries" target="_blank" rel="noopener">Telegram Community</a></li>
             </ul>
           </div>
         </div>

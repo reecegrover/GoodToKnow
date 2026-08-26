@@ -225,10 +225,15 @@ a { color: inherit; }
 /* ---------- Testimonial banners ---------- */
 .banner {
   position: relative;
+  width: 100%;
   background-size: cover;
   background-position: center;
-  min-height: 220px;
+  overflow: hidden;
+  max-height: 460px;
 }
+.banner-head    { aspect-ratio: 3818 / 902; }
+.banner-flatlay { aspect-ratio: 3818 / 764; }
+.banner-paws    { aspect-ratio: 3818 / 908; }
 
 .banner-quote {
   background: var(--bg-mid);
@@ -273,6 +278,54 @@ a { color: inherit; }
   margin: 0 auto 40px;
   color: var(--taupe);
   font-size: 1.05rem;
+}
+
+.watch-card {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: linear-gradient(155deg, var(--card) 0%, var(--card-deep) 100%);
+  border-radius: 20px;
+  padding: 28px 32px;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease;
+}
+.watch-card:hover { transform: translateY(-3px); }
+
+.watch-card-play {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FF0033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.watch-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+.watch-card-text strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: white;
+}
+.watch-card-text span {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 500px) {
+  .watch-card { flex-direction: column; text-align: center; padding: 28px 20px; }
+  .watch-card-text { text-align: center; }
 }
 
 .watch-embed {
