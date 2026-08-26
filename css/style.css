@@ -60,25 +60,23 @@ a { color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  min-height: 88px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .brand img.brand-icon {
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  background: var(--card);
-  padding: 3px;
+  height: 64px;
+  width: auto;
+  object-fit: contain;
 }
-.brand img:not(.brand-icon) { height: 30px; width: auto; }
+.brand img:not(.brand-icon) { height: 44px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -137,9 +135,11 @@ a { color: inherit; }
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 800px 500px at 15% 10%, rgba(136,88,237,0.35), transparent 60%),
-    radial-gradient(ellipse 700px 600px at 90% 80%, rgba(65,186,199,0.12), transparent 55%),
-    linear-gradient(160deg, var(--bg-deep) 0%, var(--bg-mid) 55%, #2a1c47 100%);
+    linear-gradient(160deg, rgba(34,18,54,0.25) 0%, rgba(34,18,54,0.05) 55%, rgba(34,18,54,0.35) 100%),
+    url('../images/hero-bg.avif');
+  background-size: auto, 900px 900px;
+  background-repeat: no-repeat, repeat;
+  background-position: center, center;
   padding: 64px 0 80px;
 }
 
@@ -208,7 +208,7 @@ a { color: inherit; }
   flex-wrap: wrap;
 }
 
-.hero-cta-row img { height: 78px; width: auto; }
+.hero-cta-row img { height: 260px; width: auto; }
 
 .hero-art {
   position: relative;
@@ -220,6 +220,16 @@ a { color: inherit; }
   width: 100%;
   max-width: 620px;
   filter: drop-shadow(0 25px 40px rgba(0,0,0,0.4));
+}
+
+.hero-plush {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  width: 45% !important;
+  max-width: 300px !important;
+  transform: rotate(-8deg);
+  z-index: 2;
 }
 
 /* ---------- Testimonial banners ---------- */
@@ -408,6 +418,7 @@ a { color: inherit; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { order: -1; }
   .hero-art img { max-width: 360px; }
+  .hero-plush { width: 40% !important; max-width: 150px !important; top: -16px; right: 4px; }
   .hero-card h1 { font-size: 2.4rem; }
   .wrap { padding: 0 20px; }
 
