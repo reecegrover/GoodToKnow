@@ -137,8 +137,8 @@ a { color: inherit; }
   background:
     linear-gradient(160deg, rgba(34,18,54,0.25) 0%, rgba(34,18,54,0.05) 55%, rgba(34,18,54,0.35) 100%),
     url('../images/hero-bg.avif');
-  background-size: auto, 900px 900px;
-  background-repeat: no-repeat, repeat;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   padding: 64px 0 80px;
 }
