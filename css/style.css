@@ -55,7 +55,7 @@ a { color: inherit; }
 .nav-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 14px 32px;
+  padding: 14px 32px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,7 +65,8 @@ a { color: inherit; }
 
 .brand {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  align-self: flex-end;
   gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
@@ -75,6 +76,7 @@ a { color: inherit; }
   height: 64px;
   width: auto;
   object-fit: contain;
+  align-self: flex-end;
 }
 .brand img:not(.brand-icon) { height: 44px; width: auto; }
 
@@ -212,24 +214,15 @@ a { color: inherit; }
 
 .hero-art {
   position: relative;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  max-width: 100%;
+  justify-self: center;
 }
 
 .hero-art img {
   width: 100%;
   max-width: 620px;
   filter: drop-shadow(0 25px 40px rgba(0,0,0,0.4));
-}
-
-.hero-plush {
-  position: absolute;
-  top: -30px;
-  right: -10px;
-  width: 45% !important;
-  max-width: 300px !important;
-  transform: rotate(-8deg);
-  z-index: 2;
 }
 
 /* ---------- Testimonial banners ---------- */
@@ -418,7 +411,6 @@ a { color: inherit; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { order: -1; }
   .hero-art img { max-width: 360px; }
-  .hero-plush { width: 40% !important; max-width: 150px !important; top: -16px; right: 4px; }
   .hero-card h1 { font-size: 2.4rem; }
   .wrap { padding: 0 20px; }
 
