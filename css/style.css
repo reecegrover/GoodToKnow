@@ -173,6 +173,7 @@ a { color: inherit; }
   grid-template-columns: minmax(320px, 460px) 1fr;
   gap: 48px;
   align-items: center;
+  max-width: 1500px;
 }
 
 .hero-card {
@@ -221,7 +222,7 @@ a { color: inherit; }
 
 .hero-art img {
   width: 100%;
-  max-width: 620px;
+  max-width: 930px;
   filter: drop-shadow(0 25px 40px rgba(0,0,0,0.4));
 }
 
@@ -410,7 +411,7 @@ a { color: inherit; }
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { order: -1; }
-  .hero-art img { max-width: 360px; }
+  .hero-art img { max-width: 540px; }
   .hero-card h1 { font-size: 2.4rem; }
   .wrap { padding: 0 20px; }
 
